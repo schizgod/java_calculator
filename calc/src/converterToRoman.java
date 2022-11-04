@@ -1,52 +1,43 @@
 import java.io.IOException;
 
 public class converterToRoman {
-    public static int convertToRoman(String s) throws IOException
-    {
+    public static int convertToRoman(String s) throws IOException {
         int number = 0;
         if (s.equals("I")) {
             number = 1;
-        }
-        else if (s.equals("II")) {
+        } else if (s.equals("II")) {
             number = 2;
-        }
-        else if (s.equals("III")) {
+        } else if (s.equals("III")) {
             number = 3;
-        }
-        else if (s.equals("IV")) {
+        } else if (s.equals("IV")) {
             number = 4;
-        }
-        else if (s.equals("V")) {
+        } else if (s.equals("V")) {
             number = 5;
-        }
-        else if (s.equals("VI")) {
+        } else if (s.equals("VI")) {
             number = 6;
-        }
-        else if (s.equals("VII")) {
+        } else if (s.equals("VII")) {
             number = 7;
-        }
-        else if (s.equals("VIII")) {
+        } else if (s.equals("VIII")) {
             number = 8;
-        }
-        else if (s.equals("IX")) {
+        } else if (s.equals("IX")) {
             number = 9;
-        }
-        else if (s.equals("X")) {
+        } else if (s.equals("X")) {
             number = 10;
-        }
-        else
-        {
+        } else {
             throw new IOException();
         }
         return number;
     }
-    public static String convertToArabic(int n) throws IOException
-    {
+
+    public static String convertToArabic(int n) throws IOException {
         int dec = 0;
         int ec = 0;
         String decS = "";
         String ecS = "";
         String romanNumber = "";
+        if (n < 1) {
+            throw new IOException();
+        }
         ec = n % 10;
         dec = (n / 10) * 10;
         if (ec == 1) {
